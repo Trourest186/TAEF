@@ -28,3 +28,6 @@ cat ~/.ssh/id_rsa.pub
 copy key into Profile/Settings/SSH and GPG key, then create SSH new
 
 continue -> (*)
+
+
+Phạm Trường Giang
