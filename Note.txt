@@ -1,11 +1,13 @@
 # Công việc cần training:
+
 - Học docker networking
 - Lab (optional)
 - Kubespray
 - OpenFaas
 - python for system
 
-# Git
+========================== Git ==================================
+
 - cd "target"
 git init
 git add .
@@ -16,7 +18,7 @@ git push -u origin master
 
 (*)
 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
-____
+__________________________________________________________________
 Using for linux to git repo
 
 mkdir ~/.ssh
@@ -29,6 +31,18 @@ copy key into Profile/Settings/SSH and GPG key, then create SSH new
 
 continue -> (*)
 <<<<<<< HEAD
+
+__________________________________________________________________
+Using for updating documents
+
+git pull origin master 
+(optional) 
+git pull origin master --allow-unrelated-histories
+git add "file_name"
+git commit -m "New"
+git push -u origin "branch"
+
+
 
 
 Phạm Trường Giang
