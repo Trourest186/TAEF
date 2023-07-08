@@ -42,6 +42,28 @@ git add "file_name"
 git commit -m "New"
 git push -u origin "branch"
 
+========================== END ==================================
+
+
+================== Expanding LVM parted =========================
+# Ex for /dev/mapper/centos-root
+- Gỡ bỏ phân vùng /dev/mapper/centos-root khỏi hệ thống LVM bằng lệnh sau:
+sudo lvremove /dev/mapper/centos-root
+
+- Mở rộng phân vùng /dev/sda2 sử dụng toàn bộ dung lượng còn lại trên ổ đĩa sda:
+sudo parted /dev/sda resizepart 2 100%
+
+- Cập nhật lại kích thước của hệ thống tệp và phân vùng LVM:
+sudo pvresize /dev/sda2
+sudo lvextend -l +100%FREE /dev/mapper/centos-root
+
+- Thực hiện lại kiểm tra kích thước của phân vùng /dev/mapper/centos-root để đảm bảo nó đã được mở rộng:
+sudo lvdisplay /dev/mapper/centos-root
+
+- Để xác nhận thay đổi, cập nhật lại hệ thống tệp:
+sudo resize2fs /dev/mapper/centos-root
+
+
 
 
 
