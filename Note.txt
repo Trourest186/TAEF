@@ -28,6 +28,9 @@ cat ~/.ssh/id_rsa.pub
 copy key into Profile/Settings/SSH and GPG key, then create SSH new
 
 continue -> (*)
+<<<<<<< HEAD
 
 
 Phạm Trường Giang
+=======
+>>>>>>> e7e140814d66d33e015f529ee28f9a159d534ae6
