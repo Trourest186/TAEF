@@ -63,10 +63,30 @@ sudo lvdisplay /dev/mapper/centos-root
 - Để xác nhận thay đổi, cập nhật lại hệ thống tệp:
 sudo resize2fs /dev/mapper/centos-root
 
+========================== END ==================================
+
+
+================== Python > 3.9 for CentOS 8 ================================
+sudo yum update
+sudo dnf groupinstall 'development tools'
+sudo dnf install wget openssl-devel bzip2-devel libffi-devel
+
+sudo curl https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz -O
+tar -xvf Python-3.9.1.tgz
+
+cd Python-3.9.1
+
+sudo ./configure --enable-optimizations
+sudo make install
+
+*Note
+If you have an already existing Python binary installed at /usr/bin/python or /usr/bin/python3, you should run sudo make altinstall instead.
 
 
 
+========================== END ==================================
 
-Phạm Trường Giang
+
+#Phạm Trường Giang#
 =======
 >>>>>>> e7e140814d66d33e015f529ee28f9a159d534ae6
